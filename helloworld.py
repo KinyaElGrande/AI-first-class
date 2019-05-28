@@ -1,6 +1,9 @@
-  if 1 > 2:
-    print("1 is greater than 2")
-  elif 2 > 1:
-    print("1 is not greater than 2")
-  else:
-    print("1 is equal to 2")
+from sklearn import tree
+features = [[140, 1], [130, 1], [150, 0], [170, 0]]
+labels = [0, 0, 1, 1]
+
+clf = tree.DecisionTreeClassifier()
+
+clf = clf.fit(features, labels)
+
+print clf.predict([[150, 0]])
